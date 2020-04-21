@@ -1,10 +1,10 @@
 <?php
 
-$host       = "localhost";
-$user       = "root";
-$password   = "";
-$database   = "db_siswa";
-
-$koneksi    = mysqli_connect($host, $user, $password, $database);
+$servername ="localhost"; //host server
+$username ="root"; //user login phpMyAdmin
+$password =""; //pass login phpMyAdmin
+$dbname ="form"; //nama database
+$koneksi = mysqli_connect($servername, $username, $password, $dbname) or die ("Koneksi gagal");
+mysqli_select_db ($koneksi,$dbname) or die(mysqli_error());
 
 ?>
